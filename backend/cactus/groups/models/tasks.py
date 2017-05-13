@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.postgres.fields import JSONField
 
@@ -15,14 +16,30 @@ class Task(models.Model):
         null=True,
         blank=True,
     )
+    stamp = models.FloatField(
+        default=1494719436.0
+    )
     photo_url = models.URLField(
         verbose_name='Image',
         null=True,
         blank=True
     )
 
+    @property
+    def datetime(self):
+        return self.time
+
     class Meta:
         verbose_name = 'Task'
         verbose_name_plural = 'Tasks'
 
+    def save(self, *args, **kwargs):
+        if self.time is None:
+            self.time = datetime.datetime.fromtimestamp(self.stamp)
+        return super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.title
+
+    def __repr__(self):
+        return self.__str__()
