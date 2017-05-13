@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:background="@color/colorBack2">
 
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:id="@+id/timeLineBack"
+        android:enabled="false"
+        android:layout_width="57dp"
+        android:layout_height="match_parent"/>
+
     <RelativeLayout
         android:id="@+id/bar"
         android:layout_width="match_parent"
@@ -13,21 +22,31 @@
 
         <ImageView
             android:id="@+id/timeLineGo"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="25dp"
-            android:tint="@android:color/black"
-            android:src="@drawable/help"/>
+            android:tint="@color/colorBack"
+            android:src="@drawable/menu"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Timeline"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
+            android:textColor="@color/colorBack"
+            android:textSize="22sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/showAddDialog"
+            android:layout_alignParentRight="true"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:tint="@color/colorBack"
+            android:src="@drawable/plus"/>
 
     </RelativeLayout>
 
@@ -182,14 +201,5 @@
 
 
 </RelativeLayout>
-    
-    <LinearLayout
-        android:layout_alignParentRight="true"
-        android:clickable="false"
-        android:orientation="horizontal"
-        android:id="@+id/timeLineBack"
-        android:enabled="false"
-        android:layout_width="57dp"
-        android:layout_height="match_parent"/>
     
 </RelativeLayout>
