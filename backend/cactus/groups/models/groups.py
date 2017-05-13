@@ -59,6 +59,7 @@ class Lesson(models.Model):
         verbose_name='Day of the week',
     )
     WEEK_CHOICES = (
+        (0, 'Every week'),
         (1, 'First week'),
         (2, 'Second week'),
     )
@@ -96,8 +97,11 @@ class Lesson(models.Model):
         next = datetime.datetime(
             year=now.year,
             month=now.year,
-            hour=
+            day=now.day,
+            hour=int(self.lessons_times[self.number_of_lesson][0][:2]),
+            minute=int(self.lessons_times[self.number_of_lesson][0][3:]),
         )
+        #while (next.weekday() +1 != self.week
 
 
 
