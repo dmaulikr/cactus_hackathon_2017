@@ -12,6 +12,8 @@ class Task(models.Model):
     )
     time = models.DateTimeField(
         verbose_name='Time',
+        null=True,
+        blank=True,
     )
     photo_url = models.URLField(
         verbose_name='Image',
