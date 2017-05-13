@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
@@ -18,17 +19,20 @@
     <script type="text/javascript" src="js/main.js"></script>
 
 </head>
-<body ng-controller="sooqa-controller">
+<body>
 <div class="navbar">
 <ul>
     <li class="left">
-        <a>
-            Сука
+        <a href="#/demos"
+            ng-class="location.path() == '/demos' ||
+                    location.path == '/' ? 'active' : ''">
+            Demos
         </a>
     </li>
     <li class="left">
-        <a>
-            Я
+        <a href="#/login"
+            ng-class="location.path() == '/login' ? 'active' : ''">
+            Login
         </a>
     </li>
     <li class="left">
@@ -41,19 +45,17 @@
             Проебы
         </a>
     </li>
+    <li class="right" ng-show="name">
+        <a>
+            {{name}}
+        </a>
+    </li>
 </ul>
 </div>
 
 <div class="container">
-    <div class="col__b_4 col__s_11" style="padding-bottom: 50px">
-        <div class="dropper ">
-            <div class="panel__header">
-                Сука да я про верстальщик
-            </div>
-            <div class="panel__body" style="display: block">
-                <button class="button__primary__normal">Ебануть</button>
-            </div>
-        </div>
+    <div class="row" style="padding-bottom: 50px">
+        <div class="row" ng-view></div>
     </div>
 </div>
 </body>

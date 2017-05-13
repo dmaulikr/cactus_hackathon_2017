@@ -58,6 +58,56 @@
   .button__primary__small:disabled {
     opacity: 0.5; }
 
+.projectlist {
+  margin-top: 25px;
+  border: 5px solid #482B43;
+  background-color: #482B43;
+  border-radius: 8px; }
+  .projectlist .title {
+    position: relative;
+    padding: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #482B43;
+    background-color: #482B43;
+    color: white;
+    font-size: 18px;
+    text-align: center; }
+    .projectlist .title i {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 26px; }
+  .projectlist ul {
+    background-color: #52344E;
+    border-radius: 8px; }
+    .projectlist ul li {
+      border-radius: 8px;
+      height: 80px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #52344E; }
+      .projectlist ul li img {
+        border-radius: 8px;
+        width: 64px;
+        height: 64px; }
+      .projectlist ul li .img {
+        border-radius: 8px;
+        width: 64px;
+        height: 64px;
+        background-color: #fffeff; }
+      .projectlist ul li span {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px; }
+        .projectlist ul li span span.ptitle {
+          font-size: 18px;
+          color: #fffeff; }
+        .projectlist ul li span span.pmembers {
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.68); }
+
 @media screen and (min-width: 890px) {
   .container {
     padding: 10px 122px 0px 122px;
@@ -412,9 +462,9 @@
       .navbar ul li a:hover {
         background-color: #695f69;
         color: #fffeff; }
-      .navbar ul li a:active {
-        background-color: #695f69;
-        color: #fffeff; }
+    .navbar ul li a.active {
+      background-color: #695f69;
+      color: #fffeff; }
 
 * {
   font-family: 'Open Sans'; }

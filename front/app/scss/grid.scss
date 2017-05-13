@@ -242,10 +242,10 @@
           background-color: $bg;
           color: $white;
         }
-        &:active {
-          background-color: $bg;
-          color: $white;
-        }
+      }
+      a.active {
+        background-color: $bg;
+        color: $white;
       }
     }
   }
