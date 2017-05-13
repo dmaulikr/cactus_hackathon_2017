@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.maxmamuta.proguli.Auth.RegisterActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="100dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="MolarMak"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="135dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="molarmak@gmail.com"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="203dp"/>
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="12345qwerty"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="275dp"/>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="349dp"/>
+
+    <Button
+        android:id="@+id/gotologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to login"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="419dp"/>
+
+</LinearLayout>
