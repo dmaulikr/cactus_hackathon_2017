@@ -26,7 +26,7 @@ class TaskSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         return {
             "title": instance.title,
-            "description": instance.description,
+            "description": str(instance.description),
             "project_id": 1,
             "time": 'sample time',
             "timestamp": 0.0,
