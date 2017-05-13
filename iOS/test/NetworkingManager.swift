@@ -94,5 +94,9 @@ class NetworkingManager {
         
     }
 
+    func getPosts(forUserWithID: Int) -> [PostData] {
+        return [PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil), PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil), PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil)]
+    }
+
 
 }

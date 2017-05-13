@@ -10,10 +10,18 @@ import UIKit
 
 class TimelineViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    var posts = [PostData]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableView.dataSource = self
+        tableView.delegate = self
 
+        posts = NetworkingManager.shared.getPosts(forUserWithID: 0)
+        tableView.reloadData()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -29,5 +37,38 @@ class TimelineViewController: UIViewController {
     }
 
 
+
 }
 
+extension TimelineViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! TimelineTableViewCell
+
+        let postData = posts[indexPath.row]
+        cell.titleLabel.text = postData.title
+        cell.descriptionLabel.text = postData.description
+
+        if indexPath.row == posts.count - 1 {
+            cell.topLine.alpha = 1
+            cell.bottomLine.alpha = 0
+        } else if indexPath.row == 0 {
+            cell.topLine.alpha = 0
+            cell.bottomLine.alpha = 1
+        } else {
+            cell.topLine.alpha = 1
+            cell.bottomLine.alpha = 1
+        }
+
+        return cell
+    }
+
+}

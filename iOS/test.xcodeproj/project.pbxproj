@@ -13,6 +13,9 @@
 		3A07959E1EC7179000BED76B /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07959D1EC7179000BED76B /* NetworkingManager.swift */; };
 		3A0795A01EC71A3500BED76B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07959F1EC71A3500BED76B /* LogInViewController.swift */; };
 		3A0795A21EC71A4900BED76B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0795A11EC71A4900BED76B /* RegisterViewController.swift */; };
+		3A0E42421EC75A800057B648 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E42411EC75A800057B648 /* AddNewViewController.swift */; };
+		3A0E42441EC765770057B648 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E42431EC765770057B648 /* TimelineTableViewCell.swift */; };
+		3A0E42461EC768C80057B648 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0E42451EC768C80057B648 /* PostData.swift */; };
 		3A3474A01EC64E1E00186CE2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A34749F1EC64E1E00186CE2 /* SWRevealViewController.m */; };
 		3A3474A21EC65C1800186CE2 /* RoomTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3474A11EC65C1700186CE2 /* RoomTabController.swift */; };
 		3A3474A51EC6701900186CE2 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3474A41EC6701900186CE2 /* ProjectsViewController.swift */; };
@@ -55,6 +58,9 @@
 		3A07959D1EC7179000BED76B /* NetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		3A07959F1EC71A3500BED76B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3A0795A11EC71A4900BED76B /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3A0E42411EC75A800057B648 /* AddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
+		3A0E42431EC765770057B648 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		3A0E42451EC768C80057B648 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		3A34749C1EC64AA200186CE2 /* test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A34749E1EC64E1E00186CE2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3A34749F1EC64E1E00186CE2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -167,9 +173,12 @@
 				3A3474A31EC66FAC00186CE2 /* RoomViewControllers */,
 				3A3474A11EC65C1700186CE2 /* RoomTabController.swift */,
 				3A688EF51EA2364700DA41CA /* Main.storyboard */,
+				3A0E42431EC765770057B648 /* TimelineTableViewCell.swift */,
+				3A0E42411EC75A800057B648 /* AddNewViewController.swift */,
 				3A0795971EC6FA5600BED76B /* MenuViewController.swift */,
 				3A0795991EC703BC00BED76B /* TeamTableViewCell.swift */,
 				3A07959B1EC7074100BED76B /* TeamData.swift */,
+				3A0E42451EC768C80057B648 /* PostData.swift */,
 				3A0795961EC6F28200BED76B /* SWRevealViewController */,
 				3A688EFB1EA2364700DA41CA /* Assets.xcassets */,
 				3A688EFD1EA2364700DA41CA /* LaunchScreen.storyboard */,
@@ -334,9 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3474A51EC6701900186CE2 /* ProjectsViewController.swift in Sources */,
+				3A0E42421EC75A800057B648 /* AddNewViewController.swift in Sources */,
 				3A0795981EC6FA5600BED76B /* MenuViewController.swift in Sources */,
 				3AEAA9CF1EC71D5300350437 /* UserDefaultsManager.swift in Sources */,
 				3A3474A71EC6705400186CE2 /* RemindersViewController.swift in Sources */,
+				3A0E42461EC768C80057B648 /* PostData.swift in Sources */,
 				3A688EF41EA2364600DA41CA /* TimelineViewController.swift in Sources */,
 				3A688EF21EA2364600DA41CA /* AppDelegate.swift in Sources */,
 				3A3474A91EC670A400186CE2 /* NotesViewController.swift in Sources */,
@@ -350,6 +361,7 @@
 				3A3474A21EC65C1800186CE2 /* RoomTabController.swift in Sources */,
 				3A07959C1EC7074100BED76B /* TeamData.swift in Sources */,
 				3A07959A1EC703BC00BED76B /* TeamTableViewCell.swift in Sources */,
+				3A0E42441EC765770057B648 /* TimelineTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
