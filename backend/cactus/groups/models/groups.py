@@ -65,7 +65,6 @@ class Lesson(models.Model):
         (7, 'Sunday'),
     )
     day = models.IntegerField(
-        max_length=16,
         choices=DAY_CHOICES,
         verbose_name='Day of the week',
     )
@@ -89,7 +88,7 @@ class Lesson(models.Model):
         choices=NUMBER_OF_LESSON_CHOICES,
         verbose_name="Number of lessons",
     )
-    description = JSONField(
+    description = models.TextField(
         verbose_name='Description',
     )
 
