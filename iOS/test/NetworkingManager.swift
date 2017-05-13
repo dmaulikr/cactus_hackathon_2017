@@ -95,7 +95,28 @@ class NetworkingManager {
     }
 
     func getPosts(forUserWithID: Int) -> [PostData] {
-        return [PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil), PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil), PostData(title: "This is title", description: "h ebhkb k bjzejhb hjb bekj bkbk kb llf efe ef efef ef zeaifez bzeifbefb bfjbhjhb hb hb", photoURLs: nil)]
+
+        var request = URLRequest(url: URL(string: baseURL + "api/timeline/")!)
+        request.httpMethod = "GET"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+
+            print("DATA:")
+            print(data)
+            print(response)
+            print(error)
+
+            do {
+                let responseDictionary = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+                print(responseDictionary)
+            } catch {
+                print("Error serializing", error)
+            }
+            
+        }.resume()
+
+        return []
     }
 
 
