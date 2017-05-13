@@ -1,0 +1,253 @@
+@import 'variables.scss';
+
+@mixin box {
+  width: 100%;
+}
+@mixin row {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+@mixin col($width) {
+  padding: 0px;
+  margin: 0px;
+  width: $width;
+}
+@mixin heading($color) {
+  color: $color;
+  font-size: 20px;
+  line-height: 32px;
+}
+@media screen and (min-width: 890px) {
+  .container {
+    padding: 10px 122px 0px 122px;
+    background-color: $bg;
+  }
+  .container-stretched {
+    padding: 10px 122px 0px 122px;
+    background-color: $bg;
+  }
+  .hide_b {
+    display: none !important;
+  }
+  .row__b_center {
+    @include row;
+    justify-content: center;
+  }
+  .row__b_left {
+    @include row;
+    justify-content: flex-start;
+  }
+  .row__slide {
+    @include row;
+    justify-content: center;
+  }
+  .col__b_1 {
+    @include col(8.33%);
+  }
+  .col__b_2 {
+    @include col(16.66%);
+  }
+  .col__b_3 {
+    @include col(25%);
+  }
+  .col__b_4 {
+    @include col(33.33%);
+  }
+  .col__b_5 {
+    @include col(41.66%);
+  }
+  .col__b_6 {
+    @include col(50%);
+  }
+  .col__b_7 {
+    @include col(58.33%);
+  }
+  .col__b_8 {
+    @include col(66.66%);
+  }
+  .col__b_9 {
+    @include col(75%);
+  }
+  .col__b_10 {
+    @include col(83.33%);
+  }
+  .col__b_11 {
+    @include col(91.66%);
+  }
+  .col__b_12 {
+    @include col(100%);
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 890px) {
+  .container {
+    padding: 0px;
+    background-color: $bg;
+  }
+  .container-stretched {
+    padding: 0px;
+    background-color: $bg;
+  }
+  .hide_s {
+    display: none !important;
+  }
+  .row__s_center {
+    @include row;
+    justify-content: center;
+  }
+  .row__s_left {
+    @include row;
+    justify-content: flex-start
+  }
+  .row__slide {
+    @include row;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+  .col__s_1 {
+    @include col(8.33%);
+  }
+  .col__s_2 {
+    @include col(16.66%);
+  }
+  .col__s_3 {
+    @include col(25%);
+  }
+  .col__s_4 {
+    @include col(33.33%);
+  }
+  .col__s_5 {
+    @include col(41.66%);
+  }
+  .col__s_6 {
+    @include col(50%);
+  }
+  .col__s_7 {
+    @include col(58.33%);
+  }
+  .col__s_8 {
+    @include col(66.66%);
+  }
+  .col__s_9 {
+    @include col(75%);
+  }
+  .col__s_10 {
+    @include col(83.33%);
+  }
+  .col__s_11 {
+    @include col(91.66%);
+  }
+  .col__s_12 {
+    @include col(100%);
+  }
+}
+.row {
+  @include row;
+  justify-content: flex-start;
+}
+.box {
+  @include box;
+}
+.row__center {
+  @include row;
+  justify-content: center;
+}
+
+@mixin panel($background-color) {
+  @include box;
+  margin-top: 25px;
+  background-color: $background-color;
+  border-radius: 8px;
+  .panel__body {
+    padding: 20px;
+    color: $black;
+  }
+  .panel__header {
+    @include row;
+    @include heading(black);
+    justify-content: center;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    color: $black;
+  }
+  .panel__footer {
+    @include row;
+    border-top: 2px solid $gray-light;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+    &:hover {
+      background: #fafafa;
+      color: $gray-listing-smallfont;
+    }
+    &:active {
+      box-shadow: inset 0 1px 2px black;
+      padding-top: 1px;
+    }
+  }
+  .panel__tagline {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    width: 60%;
+    color: $black;
+  }
+}
+.panel {
+  @include panel($white);
+}
+.panel-transparent {
+  @include panel(transparent);
+}
+
+.dropper {
+  @include panel($white);
+  transition: 0.2s;
+  .panel__body {
+    display: none;
+    transition: 0.2s;
+  }
+}
+
+
+.navbar {
+  ul {
+    li.left {
+      float: left;
+    }
+    li.right {
+      float: right;
+    }
+    transition: 0.2s;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $white;
+    li {
+      transition: 0.2s;
+      a {
+        transition: 0.2s;
+        display: block;
+        color: $bg;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        &:hover {
+          background-color: $bg;
+          color: $white;
+        }
+        &:active {
+          background-color: $bg;
+          color: $white;
+        }
+      }
+    }
+  }
+  
+}

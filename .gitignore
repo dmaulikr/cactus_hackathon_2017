@@ -1,3 +1,9 @@
+# front
+node_modules/
+.sass-cache/
+.gulp-scss-cache/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -11,7 +17,6 @@ __pycache__/
 env/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
