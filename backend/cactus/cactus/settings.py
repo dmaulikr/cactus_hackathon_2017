@@ -129,3 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_HEADERS = True
+CORS_ALLOW_METHODS = True
