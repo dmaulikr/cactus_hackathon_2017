@@ -1,3 +1,4 @@
+import datetime
 from django.db import models
 from django.contrib.postgres.fields import JSONField
 
@@ -73,20 +74,33 @@ class Lesson(models.Model):
         (5, 'Fifth'),
     )
     lessons_times = {
-        1: ('time1', 'time2'),
-        2: ('time1', 'time2'),
-        3: ('time1', 'time2'),
-        4: ('time1', 'time2'),
-        5: ('time1', 'time2'),
+        1: ('8:30', '10:05'),
+        2: ('10:25', '12:00'),
+        3: ('12:20', '13:55'),
+        4: ('14:15', '15:50'),
+        5: ('16:10', '17:45'),
     }
     number_of_lesson = models.SmallIntegerField(
         choices=NUMBER_OF_LESSON_CHOICES,
         verbose_name="Number of lessons",
     )
-
     description = JSONField(
         verbose_name='Description',
     )
+
+    def get_next_lessons(self, time_from=None):
+        if not isinstance(time_from, datetime.datetime):
+            time_from = datetime.datetime.now()
+
+        now = datetime.datetime.now()
+        next = datetime.datetime(
+            year=now.year,
+            month=now.year,
+            hour=
+        )
+
+
+
 
 
     def __str__(self):
