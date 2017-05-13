@@ -258,6 +258,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="attachedImageView" destination="9Oh-D1-gWk" id="D3B-rd-cJe"/>
                         <outlet property="textView" destination="g39-lw-nJp" id="vLk-b2-yCz"/>
                     </connections>
                 </viewController>
@@ -518,16 +519,16 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3a7-vW-y6V">
-                                                    <rect key="frame" x="88" y="25.5" width="70.5" height="38.5"/>
+                                                    <rect key="frame" x="88" y="25" width="71" height="39"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-9C-O5u">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="71" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-aW-9En">
-                                                            <rect key="frame" x="0.0" y="20.5" width="70.5" height="18"/>
+                                                            <rect key="frame" x="0.0" y="21" width="71" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <color key="textColor" red="0.96081342269845349" green="1" blue="0.9938328421583108" alpha="0.236603213028169" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>

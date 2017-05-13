@@ -12,6 +12,7 @@ class AddNewViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     var attachedImage: UIImage!
+    @IBOutlet weak var attachedImageView: UIImageView!
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -62,6 +63,7 @@ extension AddNewViewController: UIImagePickerControllerDelegate, UINavigationCon
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         attachedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        attachedImageView.image = attachedImage
         dismiss(animated:true, completion: nil)
     }
 
