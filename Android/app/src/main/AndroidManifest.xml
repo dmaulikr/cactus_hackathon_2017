@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.maxmamuta.proguli">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:name="android.hardware.camera2.full" />
 
     <application
         android:allowBackup="true"
@@ -26,6 +28,8 @@
         </activity>
         <activity android:name=".Auth.RegisterActivity">
         </activity>
+        <activity android:name=".Main.Timeline.AddTimeline"/>
+        <activity android:name=".Main.Timeline.MakePhoto" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
