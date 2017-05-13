@@ -9,8 +9,8 @@ class LessonSerializer(serializers.Serializer):
             "title": instance.subject.name,
             "description": str(instance.description),
             "project_id": instance.subject.id,
-            "time": 'sample time',
-            "timestamp": 0.0,
+            "time": instance.datetime.strftime("%A %H:%M"),
+            "timestamp": instance.datetime.timestamp(),
             'photo_url': "null",
         }
 
@@ -21,7 +21,7 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = [
             'photo_url',
             'description',
-            'title'
+            'title',
         ]
 
     def to_representation(self, instance):

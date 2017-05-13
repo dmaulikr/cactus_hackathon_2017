@@ -10,11 +10,14 @@ from .serializers import *
 
 @api_view(["GET"])
 def timeline_view(request):
-    lessons = Lesson.objects.all()
-    tasks = Task.objects.all()
 
-    lessons_json = LessonSerializer(lessons, many=True).data
+    tasks = Task.objects.all()
     tasks_json = TaskSerializer(tasks, many=True).data
+
+
+    group = Group.objects.last()
+    print(group)
+    lessons_json = LessonSerializer(group.get_lessons(), many=True).data if group else []
     return Response(lessons_json + tasks_json)
 
 
