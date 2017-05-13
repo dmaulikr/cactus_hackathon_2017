@@ -13,6 +13,8 @@ struct PostData {
     var title: String
     var description: String
     var photoURLs: [String]?
+    var date: Date
+    //var repeated: Bool
     //var color: UIColor?
 
 }
