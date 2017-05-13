@@ -74,13 +74,7 @@ class Lesson(models.Model):
         (4, 'Fourth'),
         (5, 'Fifth'),
     )
-    lessons_times = {
-        1: ('8:30', '10:05'),
-        2: ('10:25', '12:00'),
-        3: ('12:20', '13:55'),
-        4: ('14:15', '15:50'),
-        5: ('16:10', '17:45'),
-    }
+
     number_of_lesson = models.SmallIntegerField(
         choices=NUMBER_OF_LESSON_CHOICES,
         verbose_name="Number of lessons",
@@ -94,12 +88,19 @@ class Lesson(models.Model):
             time_from = datetime.datetime.now()
 
         now = datetime.datetime.now()
+        lessons_times = {
+            1: ('8:30', '10:05'),
+            2: ('10:25', '12:00'),
+            3: ('12:20', '13:55'),
+            4: ('14:15', '15:50'),
+            5: ('16:10', '17:45'),
+        }
         next = datetime.datetime(
             year=now.year,
             month=now.year,
             day=now.day,
-            hour=int(self.lessons_times[self.number_of_lesson][0][:2]),
-            minute=int(self.lessons_times[self.number_of_lesson][0][3:]),
+            hour=int(lessons_times[self.number_of_lesson][0][:2]),
+            minute=int(lessons_times[self.number_of_lesson][0][3:]),
         )
         #while (next.weekday() +1 != self.week
 
