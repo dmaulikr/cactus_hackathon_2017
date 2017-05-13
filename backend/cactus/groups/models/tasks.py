@@ -7,7 +7,7 @@ class Task(models.Model):
         max_length=100,
         verbose_name='Title',
     )
-    description = JSONField(
+    description = models.TextField(
         verbose_name='Description',
     )
     time = models.DateTimeField(
