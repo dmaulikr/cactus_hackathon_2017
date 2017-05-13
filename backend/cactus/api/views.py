@@ -1,23 +1,22 @@
 import json
 from rest_framework.generics import *
-from django.http.response import JsonResponse, HttpResponse
+from django.http.response import JsonResponse
+from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from groups.models import *
 
 from .serializers import *
 
 
-class TimelineView(ListAPIView):
-    queryset = Lesson.objects.all()
-    serializer_class = LessonSerializer
+@api_view(["GET"])
+def timeline_view(request):
+    lessons = Lesson.objects.all()
+    tasks = Task.objects.all()
 
+    lessons_json = LessonSerializer(lessons, many=True).data
+    tasks_json = TaskSerializer(tasks, many=True).data
+    return Response(lessons_json + tasks_json)
 
-# @api_view(["GET"])
-# def timeline_view(request):
-#     lessons = 123
-#     response_data = LessonSerializer(lessons, many=True).data
-#     print(response_data, type(response_data))
-#     return JsonResponse({})
 
 class TaskCreateView(CreateAPIView):
     queryset = Task.objects.all()
