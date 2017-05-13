@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBack2">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorBar2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeline"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="55dp"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorBar2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/timelineBlock"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/timeline"
+                android:tint="@color/colorBack"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Timeline"
+                android:textColor="@color/colorBack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toEndOf="@id/timelineBlock"
+            android:layout_toStartOf="@+id/reminderBlock"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/projects"
+                android:tint="@color/colorBack"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Projects"
+                android:textColor="@color/colorBack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reminderBlock"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/clock"
+                android:tint="@color/colorBack"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Reminders"
+                android:textColor="@color/colorBack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toEndOf="@id/reminderBlock"
+            android:layout_toStartOf="@+id/attachmentBlock"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/note"
+                android:tint="@color/colorBack"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Notes"
+                android:textColor="@color/colorBack"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attachmentBlock"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/attachments"
+                android:tint="@color/colorBack"/>
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Attachments"
+                android:textColor="@color/colorBack"/>
+
+        </LinearLayout>
+
+
+</RelativeLayout>
+</RelativeLayout>

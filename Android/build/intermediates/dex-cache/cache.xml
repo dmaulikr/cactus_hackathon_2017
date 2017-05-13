@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/dbed34182265d9937258e7cead8dc741ba4994d1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_b32c3b4588d6ca5b46913cffca93d7ddad112ad2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/a4aaf5a371f2884b8259ca8ff465fed11c00235e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_a2e325800ad2c10c639e6c0825b243d86b67c903.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/f6da9338590c2ce58c6d87bc298023438cfcfb16/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_732f78f0d60508e1359cf633df85fc828739ff95.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2007e0354336ea1dfdd0364081b76307f505a4da">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_fc5bd8bb835f48b7d57fde3d81d4f2934f7b3a0c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0663debfb146102cdcfd5c53c21e26acb0e738b0/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/d6afef1878ed05f0687dd2d078ec49959c32621d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_646f6d94d53489c11a2ffbe6cd248849ad8c9592.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/support-annotations-25.3.1_b6bed259d56e1c5f501290fff750572b964cebcf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/37cfc1553fdcd44e72523666937369c9ac07f5d9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_665a215bb7e4345300d6428cadaf13ffb4fbc6a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/a4c9f53545b0e0b52e277356ea3acc81bbc85300/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_8ce641733d75e6e5167b6a89369a7ab23c377e10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/0bff48926ecb9325402ff4b51f684a80efbb4cec/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_10e4d237af9ccd1bf976cee8e5587d50c4bbae7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/1715e9ac3c8ac568d6c0f51030710cb5ed3be2bb/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_f1fc5c426c480c63a9f937a3cdc353530a140b02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/f83311b1d2ba1e1bf8e337d7a709daaf45a5e67b/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_fdafa095100bd1265ccd87e9511f843e5638eab1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_e75e658d61fd9092b0bd5e41cd18decd4dc0682e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/maxmamuta/.android/build-cache/b54955c547ccc25f7788b56587d0dfbcda354299/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/maxmamuta/AndroidStudioProjects/Proguli/app/build/intermediates/pre-dexed/debug/classes_b6c74f9951bcd55bee4b24f1efef1ff80929b56a.jar" />
+    </item>
+
+</items>
