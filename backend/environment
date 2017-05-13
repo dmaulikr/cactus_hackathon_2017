@@ -1,0 +1,6 @@
+POSTGRES_USER=cactus_admin
+POSTGRES_PASSWORD=secretword
+POSTGRES_DB=cactus
+
+
+DEBUG=True

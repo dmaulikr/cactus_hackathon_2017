@@ -1,0 +1,18 @@
+<div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;" 
+    ng-controller="loginController">
+    <div class="col__b_6 col__s_11" >
+        <div class="panel " style="padding-left: 10px;">
+            <div class="panel__header">
+                Log in
+            </div>
+            <div class="panel__body" style="display: flex; flex-direction: column; justify-content: center">
+                <form style="display: flex; flex-direction: column; justify-content: center">
+                    <input type="email" placeholder="email" required ng-model="email"></input>
+                    <input type="password" placeholder="password" required ng-model="password"></input>
+                    <button class="button__primary__normal_block" ng-click="login()">Login</button>
+                    <button class="button__primary__normal_block" ng-click="register()">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
