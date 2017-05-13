@@ -1,2 +1,2 @@
-from .projects import *
+from .groups import *
 from .users import *
