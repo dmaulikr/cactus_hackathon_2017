@@ -8,7 +8,7 @@ from .serializers import *
 
 
 class TimelineView(ListAPIView):
-    queryset = list(Lesson.objects.all()) + list(Lesson.objects.all())
+    queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
 
 
