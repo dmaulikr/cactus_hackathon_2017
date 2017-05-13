@@ -25,20 +25,6 @@ public class PGAuth {
     OkHttpClient client = new OkHttpClient();
     Context appContext;
 
-    String getData(String url, Context appContext) {
-        this.appContext = appContext;
-        try {
-            Request request = new Request.Builder()
-                    .url(url)
-                    .build();
-
-            Response response = client.newCall(request).execute();
-            return response.body().string();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "null";
-    }
 
     public void postData(String url, RequestBody formBody, Context appContext) {
         this.appContext = appContext;
