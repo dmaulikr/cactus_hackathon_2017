@@ -11,6 +11,7 @@ class LessonSerializer(serializers.Serializer):
             "project_id": instance.subject.id,
             "time": 'sample time',
             "timestamp": 0.0,
+            'photo_url': "null",
         }
 
 
@@ -30,4 +31,5 @@ class TaskSerializer(serializers.ModelSerializer):
             "project_id": 1,
             "time": 'sample time',
             "timestamp": 0.0,
+            'photo_url': instance.photo_url,
         }
