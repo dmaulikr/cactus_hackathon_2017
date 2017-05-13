@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/takephoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tint="@android:color/white"
+        android:src="@drawable/circle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+
+    <ImageView
+        android:layout_toRightOf="@id/takephoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="45dp"
+        android:tint="@android:color/white"
+        android:src="@drawable/rotatecamera"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"/>
+
+
+</RelativeLayout>

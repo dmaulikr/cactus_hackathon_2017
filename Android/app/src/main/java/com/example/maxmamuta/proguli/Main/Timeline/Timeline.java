@@ -1,5 +1,7 @@
-package com.example.maxmamuta.proguli.Main.Fragments;
+package com.example.maxmamuta.proguli.Main.Timeline;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -36,6 +39,7 @@ public class Timeline extends Fragment {
                 vi.startAnimation(anim);
                 li.setEnabled(true);
                 li.setClickable(true);
+                li.bringToFront();
             }
         });
 
@@ -50,6 +54,14 @@ public class Timeline extends Fragment {
                 vi.startAnimation(anim);
                 li.setEnabled(false);
                 li.setClickable(false);
+            }
+        });
+
+        ImageView me = (ImageView) vi.findViewById(R.id.showAddDialog);
+        me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity().getApplicationContext(), AddTimeline.class));
             }
         });
 

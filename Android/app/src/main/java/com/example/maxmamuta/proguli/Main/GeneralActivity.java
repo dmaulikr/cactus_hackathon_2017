@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.maxmamuta.proguli.Main.Fragments.Menu;
-import com.example.maxmamuta.proguli.Main.Fragments.Timeline;
+import com.example.maxmamuta.proguli.Main.Timeline.Timeline;
 import com.example.maxmamuta.proguli.R;
 
 /**
