@@ -34,3 +34,14 @@ class TaskSerializer(serializers.ModelSerializer):
             "timestamp": instance.datetime.timestamp(),
             'photo_url': instance.photo_url,
         }
+
+
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = [
+            'id',
+            'name',
+            'teacher',
+        ]
+

@@ -27,3 +27,8 @@ def timeline_view(request):
 class TaskCreateView(CreateAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+
+class SubjectListView(ListAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer

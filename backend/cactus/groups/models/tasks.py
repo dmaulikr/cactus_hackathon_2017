@@ -1,6 +1,5 @@
 import datetime
 from django.db import models
-from django.contrib.postgres.fields import JSONField
 
 
 class Task(models.Model):
