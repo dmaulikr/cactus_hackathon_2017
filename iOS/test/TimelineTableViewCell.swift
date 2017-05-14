@@ -15,6 +15,8 @@ class TimelineTableViewCell: UITableViewCell {
     @IBOutlet weak var circleLine: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var imagePostView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
