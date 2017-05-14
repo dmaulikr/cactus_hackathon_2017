@@ -16,6 +16,8 @@ def create_lessons(group, group_id):
         if lesson['week'] == 1:
             continue
 
+        print('passing lesson', lesson)
+
         subject, _ = Subject.objects.get_or_create(
             group=group,
             name=lesson['discipline_name'],
@@ -38,13 +40,9 @@ def create_lessons(group, group_id):
 
 def create_groups():
     results = []
-    response = requests.get(API_DOMAIN + '/groups/?limit=100').json()
+    response = requests.get(API_DOMAIN + '/groups/?limit=1').json()
 
     results.extend(response['results'])
-
-    while response['next']:
-        response = requests.get(response['next']).json()
-        results.extend(response['results'])
 
     for result in results:
         print('start', result['name'], result['id'])
