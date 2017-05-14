@@ -8,6 +8,7 @@ class LessonSerializer(serializers.Serializer):
         return {
             "title": instance.subject.name,
             "description": str(instance.description),
+            "project": instance.subject.name,
             "project_id": instance.subject.id,
             "time": instance.datetime.strftime("%A %H:%M"),
             "timestamp": instance.datetime.timestamp(),
@@ -30,6 +31,7 @@ class TaskSerializer(serializers.ModelSerializer):
             "id": instance.id,
             "title": instance.title,
             "description": str(instance.description),
+            "project": "Custom task",
             "project_id": instance.group.id if instance.group else 0,
             "time": instance.datetime.strftime("%A %H:%M"),
             "timestamp": instance.datetime.timestamp(),
