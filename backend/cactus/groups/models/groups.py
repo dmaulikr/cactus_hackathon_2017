@@ -14,7 +14,7 @@ class Group(models.Model):
         current_week = 2
         lessons = list(
             Lesson.objects.filter(subject__group=self,
-                                  day=1,
+                                  day__in=[1, 2, 3],
                                   week=current_week)
         )
         # Hardcoded due to close estimate, why not?

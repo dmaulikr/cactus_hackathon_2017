@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from .groups import *
 
 
 class Task(models.Model):
@@ -22,6 +23,11 @@ class Task(models.Model):
         verbose_name='Image',
         null=True,
         blank=True
+    )
+    group = models.ForeignKey(
+        Group,
+        null=True,
+        blank=True,
     )
 
     @property

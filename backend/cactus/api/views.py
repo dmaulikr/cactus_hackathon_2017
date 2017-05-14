@@ -1,6 +1,5 @@
 import json
 from rest_framework.generics import *
-from django.http.response import JsonResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from groups.models import *
@@ -11,7 +10,7 @@ from .serializers import *
 @api_view(["GET"])
 def timeline_view(request):
 
-    tasks = Task.objects.all()
+    tasks = Task.objects.filter(group=None)
     tasks_json = TaskSerializer(tasks, many=True).data
 
 
@@ -34,3 +33,19 @@ class TaskCreateView(CreateAPIView):
 class SubjectListView(ListAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+
+class GroupTaskCreateView(CreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+    def perform_create(self, serializer):
+        ins = serializer.save()
+        ins.group = Group.objects.first()
+        ins.save()
+        return ins
+
+
+class GroupTaskListView(ListAPIView):
+    queryset = Task.objects.filter(group__isnull=False)
+    serializer_class = TaskSerializer
