@@ -45,6 +45,18 @@ class Subject(models.Model):
         max_length=256,
         verbose_name='Teacher`s name'
     )
+    lessons_visited = models.IntegerField(
+        verbose_name='Percent of visited pairs',
+        default=50,
+    )
+    labs_passed = models.IntegerField(
+        verbose_name='Percent of done tasks',
+        default=30,
+    )
+    fire_status = models.IntegerField(
+        verbose_name='Fire status (1-10)',
+        default=3,
+    )
 
     def __str__(self):
         return "{} <{}>".format(self.name, self.group.name)
@@ -116,8 +128,6 @@ class Lesson(models.Model):
             hour=int(lessons_times[self.number_of_lesson][0][:2]),
             minute=int(lessons_times[self.number_of_lesson][0][3:])
         )
-
-
 
 
     def __str__(self):

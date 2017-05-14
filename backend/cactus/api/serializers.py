@@ -46,3 +46,13 @@ class SubjectSerializer(serializers.ModelSerializer):
             'teacher',
         ]
 
+    def to_representation(self, subject):
+        return {
+            'id': subject.id,
+            'name': subject.name,
+            'teacher': subject.teacher,
+            'lessons_visited': subject.lessons_visited,
+            'labs_passed': subject.labs_passed,
+            'fire_status': subject.fire_status,
+        }
+

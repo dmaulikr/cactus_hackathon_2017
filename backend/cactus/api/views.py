@@ -49,3 +49,8 @@ class GroupTaskCreateView(CreateAPIView):
 class GroupTaskListView(ListAPIView):
     queryset = Task.objects.filter(group__isnull=False)
     serializer_class = TaskSerializer
+
+
+class SubjectRetrieveView(RetrieveAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
