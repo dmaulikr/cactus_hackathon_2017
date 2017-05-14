@@ -10,7 +10,7 @@ from .serializers import *
 @api_view(["GET"])
 def timeline_view(request):
 
-    tasks = Task.objects.filter(group=None)
+    tasks = Task.objects.filter()
     tasks_json = TaskSerializer(tasks, many=True).data
 
 
