@@ -20,11 +20,11 @@ class User(models.Model):
         null=True,
         blank=True,
     )
-    group = models.ForeignKey(
-        Group,
-        verbose_name='Group',
-        related_name='students'
-    )
+    # group = models.ForeignKey(
+    #     Group,
+    #     verbose_name='Group',
+    #     related_name='students'
+    # )
 
     class Meta:
         verbose_name = 'User'
