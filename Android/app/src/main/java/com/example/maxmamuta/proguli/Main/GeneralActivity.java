@@ -1,6 +1,5 @@
 package com.example.maxmamuta.proguli.Main;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.maxmamuta.proguli.Main.Attachment.Attachment;
-import com.example.maxmamuta.proguli.Main.Groups.Groups;
+import com.example.maxmamuta.proguli.Main.Timeline.Groups;
 import com.example.maxmamuta.proguli.Main.Projects.Projects;
 import com.example.maxmamuta.proguli.Main.Timeline.Timeline;
 import com.example.maxmamuta.proguli.R;
@@ -52,7 +51,9 @@ public class GeneralActivity extends AppCompatActivity {
         timelineBlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            //    Timeline.isBeGroup = false;
                 fm.beginTransaction().replace(R.id.mainFrame, new Timeline()).commit();
+
                 timelineImage.setColorFilter(getResources().getColor(R.color.colorBack));
                 timelineText.setTextColor(getResources().getColor(R.color.colorBack));
                 projectImage.setColorFilter(getResources().getColor(R.color.colorDisable));
@@ -99,6 +100,8 @@ public class GeneralActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 fm.beginTransaction().replace(R.id.mainFrame, new Groups()).commit();
+          //      Timeline.isBeGroup = true;
+         //       fm.beginTransaction().replace(R.id.mainFrame, new Timeline()).commit();
                 groupImage.setColorFilter(getResources().getColor(R.color.colorBack));
                 groupText.setTextColor(getResources().getColor(R.color.colorBack));
                 projectImage.setColorFilter(getResources().getColor(R.color.colorDisable));

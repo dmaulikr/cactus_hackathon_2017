@@ -61,6 +61,7 @@ public class AddTimeline extends Activity {
     ProgressDialog mProgressDialog;
 
     private long timecheck;
+    private boolean isGet = false;
 
     @SuppressWarnings("VisibleForTests")
     @Override

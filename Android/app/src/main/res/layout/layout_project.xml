@@ -36,17 +36,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/physics"
             android:layout_marginTop="20dp"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Physics"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/math"
             android:layout_alignParentRight="true"
             android:layout_marginTop="20dp"
             android:layout_width="130dp"
@@ -54,20 +64,38 @@
             android:layout_marginRight="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Math"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/oop"
             android:layout_marginTop="170dp"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="OOP"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/nummeth"
             android:layout_alignParentRight="true"
             android:layout_marginTop="170dp"
             android:layout_width="130dp"
@@ -75,20 +103,38 @@
             android:layout_marginRight="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Num. Meth"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/discrete"
             android:layout_marginTop="320dp"
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Discrete math"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/fp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="320dp"
             android:layout_width="130dp"
@@ -96,8 +142,16 @@
             android:layout_marginRight="40dp"
             android:background="@drawable/rec">
 
+            <TextView
+                android:id="@+id/o6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="FP"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
     </RelativeLayout>

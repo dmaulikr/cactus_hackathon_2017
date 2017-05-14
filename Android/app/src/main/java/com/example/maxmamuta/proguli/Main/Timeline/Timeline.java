@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.maxmamuta.proguli.GlobalCache;
 import com.example.maxmamuta.proguli.R;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -41,9 +42,10 @@ public class Timeline extends Fragment {
     ArrayList<TimelineItem> items = new ArrayList<>();
     private int count = 0;
 
-    PGTimeline connection = new PGTimeline();
+    public static PGTimeline connection = new PGTimeline();
 
-    boolean isBe = false;
+    public static boolean isBe = false;
+    boolean isGet = false;
 
     private Handler handler = new Handler() {
         @Override
@@ -95,6 +97,7 @@ public class Timeline extends Fragment {
                 startActivity(new Intent(getActivity().getApplicationContext(), AddTimeline.class));
             }
         });
+        GlobalCache gc = GlobalCache.getInstance();
 
         return vi;
     }
@@ -129,7 +132,7 @@ public class Timeline extends Fragment {
                     }
 
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(1500);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
