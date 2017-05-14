@@ -9,6 +9,21 @@ class Group(models.Model):
         verbose_name='Name'
     )
 
+    def get_lessons(self):
+
+        current_week = 2
+        lessons = list(
+            Lesson.objects.filter(subject__group=self,
+                                  day__in=[1, 2, 3],
+                                  week=current_week)
+        )
+        # Hardcoded due to close estimate, why not?
+
+        lessons.sort(
+            key=lambda x: x.datetime,
+        )
+        return lessons
+
     def __str__(self):
         return self.name
 
@@ -23,12 +38,24 @@ class Subject(models.Model):
         related_name='subjects'
     )
     name = models.CharField(
-        max_length=64,
+        max_length=256,
         verbose_name='Name',
     )
     teacher = models.CharField(
-        max_length=64,
+        max_length=256,
         verbose_name='Teacher`s name'
+    )
+    lessons_visited = models.IntegerField(
+        verbose_name='Percent of visited pairs',
+        default=50,
+    )
+    labs_passed = models.IntegerField(
+        verbose_name='Percent of done tasks',
+        default=30,
+    )
+    fire_status = models.IntegerField(
+        verbose_name='Fire status (1-10)',
+        default=3,
     )
 
     def __str__(self):
@@ -54,7 +81,6 @@ class Lesson(models.Model):
         (7, 'Sunday'),
     )
     day = models.IntegerField(
-        max_length=16,
         choices=DAY_CHOICES,
         verbose_name='Day of the week',
     )
@@ -74,38 +100,34 @@ class Lesson(models.Model):
         (4, 'Fourth'),
         (5, 'Fifth'),
     )
-
     number_of_lesson = models.SmallIntegerField(
         choices=NUMBER_OF_LESSON_CHOICES,
         verbose_name="Number of lessons",
     )
-    description = JSONField(
+    description = models.TextField(
         verbose_name='Description',
     )
 
-    def get_next_lessons(self, time_from=None):
-        if not isinstance(time_from, datetime.datetime):
-            time_from = datetime.datetime.now()
+    @property
+    def datetime(self):
+        d = datetime.datetime(year=2017, month=5, day=14)
+        d += datetime.timedelta(days=self.day)
 
-        now = datetime.datetime.now()
+
         lessons_times = {
-            1: ('8:30', '10:05'),
+            1: ('08:30', '10:05'),
             2: ('10:25', '12:00'),
             3: ('12:20', '13:55'),
             4: ('14:15', '15:50'),
             5: ('16:10', '17:45'),
         }
-        next = datetime.datetime(
-            year=now.year,
-            month=now.year,
-            day=now.day,
+        return datetime.datetime(
+            year=d.year,
+            month=d.month,
+            day=d.day,
             hour=int(lessons_times[self.number_of_lesson][0][:2]),
-            minute=int(lessons_times[self.number_of_lesson][0][3:]),
+            minute=int(lessons_times[self.number_of_lesson][0][3:])
         )
-        #while (next.weekday() +1 != self.week
-
-
-
 
 
     def __str__(self):

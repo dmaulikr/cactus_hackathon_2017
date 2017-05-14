@@ -9,8 +9,8 @@ class LessonSerializer(serializers.Serializer):
             "title": instance.subject.name,
             "description": str(instance.description),
             "project_id": instance.subject.id,
-            "time": 'sample time',
-            "timestamp": 0.0,
+            "time": instance.datetime.strftime("%A %H:%M"),
+            "timestamp": instance.datetime.timestamp(),
             'photo_url': "null",
         }
 
@@ -21,15 +21,38 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = [
             'photo_url',
             'description',
-            'title'
+            'title',
+            'stamp',
         ]
 
     def to_representation(self, instance):
         return {
+            "id": instance.id,
             "title": instance.title,
             "description": str(instance.description),
-            "project_id": 1,
-            "time": 'sample time',
-            "timestamp": 0.0,
-            'photo_url': instance.photo_url,
+            "project_id": instance.group.id if instance.group else 0,
+            "time": instance.datetime.strftime("%A %H:%M"),
+            "timestamp": instance.datetime.timestamp(),
+            'photo_url': instance.photo_url or 'null',
         }
+
+
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = [
+            'id',
+            'name',
+            'teacher',
+        ]
+
+    def to_representation(self, subject):
+        return {
+            'id': subject.id,
+            'name': subject.name,
+            'teacher': subject.teacher,
+            'lessons_visited': subject.lessons_visited,
+            'labs_passed': subject.labs_passed,
+            'fire_status': subject.fire_status,
+        }
+
