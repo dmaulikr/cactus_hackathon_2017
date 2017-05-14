@@ -10,4 +10,5 @@ public class TimelineItem {
     public int project_id;
     public String time;
     public double timestamp;
+    public String photo_url;
 }

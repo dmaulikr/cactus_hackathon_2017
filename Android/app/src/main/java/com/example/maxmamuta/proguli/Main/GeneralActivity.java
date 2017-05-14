@@ -1,5 +1,6 @@
 package com.example.maxmamuta.proguli.Main;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.maxmamuta.proguli.Main.Attachment.Attachment;
+import com.example.maxmamuta.proguli.Main.Groups.Groups;
 import com.example.maxmamuta.proguli.Main.Projects.Projects;
 import com.example.maxmamuta.proguli.Main.Timeline.Timeline;
 import com.example.maxmamuta.proguli.R;
@@ -38,10 +41,12 @@ public class GeneralActivity extends AppCompatActivity {
         final ImageView timelineImage = (ImageView)findViewById(R.id.timelineImage);
         final ImageView projectImage = (ImageView)findViewById(R.id.projectImage);
         final ImageView attachmentImage = (ImageView)findViewById(R.id.attachmentImage);
+        final ImageView groupImage = (ImageView)findViewById(R.id.groupImage);
 
         final TextView timelineText = (TextView)findViewById(R.id.timelineText);
         final TextView projectText = (TextView)findViewById(R.id.projectText);
         final TextView attachmentText = (TextView)findViewById(R.id.attachmentText);
+        final TextView groupText = (TextView)findViewById(R.id.groupText);
 
         final LinearLayout timelineBlock = (LinearLayout)findViewById(R.id.timelineBlock);
         timelineBlock.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +59,8 @@ public class GeneralActivity extends AppCompatActivity {
                 projectText.setTextColor(getResources().getColor(R.color.colorDisable));
                 attachmentImage.setColorFilter(getResources().getColor(R.color.colorDisable));
                 attachmentText.setTextColor(getResources().getColor(R.color.colorDisable));
+                groupImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                groupText.setTextColor(getResources().getColor(R.color.colorDisable));
             }
         });
         LinearLayout projectBlock = (LinearLayout)findViewById(R.id.projectBlock);
@@ -67,20 +74,39 @@ public class GeneralActivity extends AppCompatActivity {
                 timelineText.setTextColor(getResources().getColor(R.color.colorDisable));
                 attachmentImage.setColorFilter(getResources().getColor(R.color.colorDisable));
                 attachmentText.setTextColor(getResources().getColor(R.color.colorDisable));
+                groupImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                groupText.setTextColor(getResources().getColor(R.color.colorDisable));
             }
         });
         LinearLayout attachmentBlock = (LinearLayout)findViewById(R.id.attachmentBlock);
         attachmentBlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-        //        if (menuFragment != new )
-        //            fm.beginTransaction().add(R.id.menuFrame, new Projects()).commit();
+                fm.beginTransaction().replace(R.id.mainFrame, new Attachment()).commit();
                 attachmentImage.setColorFilter(getResources().getColor(R.color.colorBack));
                 attachmentText.setTextColor(getResources().getColor(R.color.colorBack));
                 projectImage.setColorFilter(getResources().getColor(R.color.colorDisable));
                 projectText.setTextColor(getResources().getColor(R.color.colorDisable));
                 timelineImage.setColorFilter(getResources().getColor(R.color.colorDisable));
                 timelineText.setTextColor(getResources().getColor(R.color.colorDisable));
+                groupImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                groupText.setTextColor(getResources().getColor(R.color.colorDisable));
+            }
+        });
+
+        LinearLayout groupBlock = (LinearLayout)findViewById(R.id.groupBlock);
+        groupBlock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fm.beginTransaction().replace(R.id.mainFrame, new Groups()).commit();
+                groupImage.setColorFilter(getResources().getColor(R.color.colorBack));
+                groupText.setTextColor(getResources().getColor(R.color.colorBack));
+                projectImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                projectText.setTextColor(getResources().getColor(R.color.colorDisable));
+                timelineImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                timelineText.setTextColor(getResources().getColor(R.color.colorDisable));
+                attachmentImage.setColorFilter(getResources().getColor(R.color.colorDisable));
+                attachmentText.setTextColor(getResources().getColor(R.color.colorDisable));
             }
         });
 

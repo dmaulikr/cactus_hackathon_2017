@@ -27,8 +27,6 @@ public class Menu extends Fragment {
         ListView lv = (ListView) v.findViewById(R.id.listView);
         List<String> aa = new ArrayList<>();
         aa.add("a");
-        aa.add("b");
-        aa.add("c");
         lv.setAdapter(new TeamListAdapter(getActivity().getApplicationContext(), aa));
         return v;
     }

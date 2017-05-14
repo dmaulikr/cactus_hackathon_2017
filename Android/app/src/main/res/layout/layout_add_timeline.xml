@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -29,60 +30,74 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 
-        <TextView
-            android:id="@+id/OK"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:textSize="18dp"
-            android:text="OK"/>
-
     </RelativeLayout>
 
     <EditText
+        android:layout_marginTop="15dp"
         android:id="@+id/title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="2"
+        android:minLines="2"
+        android:maxLines="3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Title"/>
+        android:inputType="textMultiLine"
+        android:hint="Input title"
+        android:gravity="top|center_horizontal"/>
 
     <EditText
         android:id="@+id/description"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="4"
+        android:minLines="4"
+        android:maxLines="8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Description"/>
+        android:inputType="textMultiLine"
+        android:hint="Input description"
+        android:gravity="top|center_horizontal"/>
 
-    <Spinner
-        android:id="@+id/spinner"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content">
     <ImageView
+        android:layout_marginLeft="15dp"
         android:id="@+id/photo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorBack2"/>
 
     <Button
         android:id="@+id/photoset"
-        android:layout_width="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
         android:text="Set Photo"/>
 
+    </LinearLayout>
+
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/create"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create"/>
 
-    <Button
-        android:id="@+id/exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Exit"/>
+    <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+        android:layout_marginTop="10dp"
+        android:id="@+id/timepicker"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        app:picker_curved="true"
+        app:picker_cyclic="true"
+        app:picker_visibleItemCount="3"/>
+
 </LinearLayout>

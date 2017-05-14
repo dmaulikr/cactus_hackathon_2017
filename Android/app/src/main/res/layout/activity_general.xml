@@ -36,7 +36,7 @@
 
         <LinearLayout
             android:id="@+id/timelineBlock"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="30dp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -63,6 +63,8 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_toRightOf="@id/timelineBlock"
+            android:layout_marginLeft="45dp"
             android:id="@+id/projectBlock"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -90,11 +92,41 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_toLeftOf="@+id/attachmentBlock"
+            android:layout_marginRight="35dp"
+            android:id="@+id/groupBlock"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/groupImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/men"
+                android:tint="@color/colorDisable"/>
+
+            <TextView
+                android:id="@+id/groupText"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:text="Groups"
+                android:textColor="@color/colorDisable"/>
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/attachmentBlock"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="45dp"
+            android:layout_marginRight="30dp"
             android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="50dp"

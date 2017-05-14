@@ -30,15 +30,75 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
 
-        <ImageView
-            android:id="@+id/showAddDialog"
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_alignParentRight="true"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:tint="@color/colorBack"
-            android:src="@drawable/plus"/>
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="170dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="170dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="320dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="320dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+
+        </LinearLayout>
+
 
     </RelativeLayout>
 

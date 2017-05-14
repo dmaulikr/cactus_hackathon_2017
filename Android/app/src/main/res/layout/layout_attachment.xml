@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:background="@color/colorBack2">
 
     <RelativeLayout
         android:id="@+id/bar"
@@ -28,16 +29,6 @@
             android:textSize="22sp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"/>
-
-        <ImageView
-            android:id="@+id/showAddDialog"
-            android:layout_alignParentRight="true"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:tint="@color/colorBack"
-            android:src="@drawable/plus"/>
 
     </RelativeLayout>
 

@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e63fc14c677039dba1a43f32b3794428e8075976">
+        sha1="ac6249e1f62a10daeb90fe77ec7ab9446e076f86">
         <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9762013bfff07ea01ce06370873b5d9b13eec537\classes.dex" />
     </item>
     <item
@@ -36,6 +36,15 @@
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_938ab2c189805b200836d59096cf1c3500a0979c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Maxim\.android\build-cache\7d8b45aea754ee622964b8832702984691476c12\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48eb33f8fa6d96f59ebab04191f47cae9e8b33c3">
+        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ddb42873c7b1de702d324221873b007200595adb\classes.dex" />
     </item>
 
 </items>

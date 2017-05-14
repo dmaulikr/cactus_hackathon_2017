@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.maxmamuta.proguli.R;
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -38,12 +39,11 @@ public class Timeline extends Fragment {
     LinearLayout li;
     ListView listView;
     ArrayList<TimelineItem> items = new ArrayList<>();
-
-    ImageView timelineImage, projectImage, attachmentImage;
-    TextView timelineText, projectText, attachmentText;
-    LinearLayout timelineBlock, projectBlock, attachmentBlock;
+    private int count = 0;
 
     PGTimeline connection = new PGTimeline();
+
+    boolean isBe = false;
 
     private Handler handler = new Handler() {
         @Override
@@ -58,6 +58,7 @@ public class Timeline extends Fragment {
         vi = inflater.inflate(R.layout.layout_timeline, parent, false);
 
         listView = (ListView) vi.findViewById(R.id.listView);
+        isBe = true;
         setListView();
 
         ImageView im = (ImageView) vi.findViewById(R.id.timeLineGo);
@@ -98,16 +99,41 @@ public class Timeline extends Fragment {
         return vi;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        isBe = true;
+        setListView();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        isBe = false;
+    }
+
     private void setListView() {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String arr = connection.getData("http://178.62.238.65:8841/api/timeline/", getActivity().getApplicationContext());
-                Log.e("TAG", arr);
-                Gson gson = new Gson();
-                TimelineItem itemes[] = gson.fromJson(arr, TimelineItem[].class);
-                items = new ArrayList<>(Arrays.asList(itemes));
-                handler.sendEmptyMessage(0);
+                while (isBe) {
+                    String arr = connection.getData("http://178.62.238.65:8841/api/timeline/", getActivity().getApplicationContext());
+                    Log.e("TAG", arr);
+                    Gson gson = new Gson();
+                    TimelineItem itemes[] = gson.fromJson(arr, TimelineItem[].class);
+                    items = new ArrayList<>(Arrays.asList(itemes));
+
+                    if(items.size() > count) {
+                        handler.sendEmptyMessage(0);
+                        count = items.size();
+                    }
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         }).start();
     }
@@ -127,6 +153,10 @@ public class Timeline extends Fragment {
                 title.setText(coc.title);
                 TextView description = (TextView) convertView.findViewById(R.id.description);
                 description.setText(coc.description);
+                ImageView image = (ImageView) convertView.findViewById(R.id.imageView);
+                Picasso.with(getActivity().getApplicationContext()).load(coc.photo_url).into(image);
+                TextView clock = (TextView) convertView.findViewById(R.id.clock);
+                clock.setText(coc.time);
             }
 
             return convertView;
