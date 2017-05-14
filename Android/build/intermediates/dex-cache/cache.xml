@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Maxim\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.12.0\3742beff8024d0a0073d284b7c5e4cbf73d99b25\okio-1.12.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3742beff8024d0a0073d284b7c5e4cbf73d99b25">
-        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.12.0_714ef5b0287868a510ed7ee81485e9485b9f74b4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e63fc14c677039dba1a43f32b3794428e8075976">
+        sha1="7099878573d12335ae9638afb889129232ae1102">
         <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9762013bfff07ea01ce06370873b5d9b13eec537\classes.dex" />
     </item>
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="C:\Users\Maxim\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.7.0\6edbebdd8868708db718d15c09c4b28037fd487e\okhttp-3.7.0.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="6edbebdd8868708db718d15c09c4b28037fd487e">
-        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.7.0_6765af4a2151e33d7ac59cedc74148bd5e6ec7a2\classes.dex" />
+        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\pre-dexed\debug\okhttp-3.7.0_6765af4a2151e33d7ac59cedc74148bd5e6ec7a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Maxim\.android\build-cache\7d8b45aea754ee622964b8832702984691476c12\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48eb33f8fa6d96f59ebab04191f47cae9e8b33c3">
+        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\pre-dexed\debug\classes_ddb42873c7b1de702d324221873b007200595adb.jar" />
     </item>
     <item
         is-multidex="true"
@@ -36,6 +36,15 @@
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
         <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_938ab2c189805b200836d59096cf1c3500a0979c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Maxim\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.12.0\3742beff8024d0a0073d284b7c5e4cbf73d99b25\okio-1.12.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3742beff8024d0a0073d284b7c5e4cbf73d99b25">
+        <dex dex="C:\Users\Maxim\Desktop\Cactus\Android\app\build\intermediates\pre-dexed\debug\okio-1.12.0_714ef5b0287868a510ed7ee81485e9485b9f74b4.jar" />
     </item>
 
 </items>

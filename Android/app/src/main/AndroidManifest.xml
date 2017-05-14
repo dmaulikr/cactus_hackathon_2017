@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".Main.Timeline.AddTimeline"/>
         <activity android:name=".Main.Timeline.MakePhoto" android:screenOrientation="portrait"/>
+        <activity android:name=".Main.Projects.Lesson"/>
+        <activity android:name=".Main.Timeline.AddGroupline"/>
     </application>
 
 </manifest>

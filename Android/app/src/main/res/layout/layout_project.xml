@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorBack2">
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorBar2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/timeLineGo"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:tint="@color/colorBack"
+            android:src="@drawable/menu"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Projects"
+            android:textColor="@color/colorBack"
+            android:textSize="22sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/physics"
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Physics"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/math"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Math"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/oop"
+            android:layout_marginTop="170dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="OOP"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nummeth"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="170dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Num. Meth"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/discrete"
+            android:layout_marginTop="320dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Discrete math"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="320dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rec">
+
+            <TextView
+                android:id="@+id/o6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="FP"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
