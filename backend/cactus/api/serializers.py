@@ -33,7 +33,7 @@ class TaskSerializer(serializers.ModelSerializer):
             "project_id": instance.group.id if instance.group else 0,
             "time": instance.datetime.strftime("%A %H:%M"),
             "timestamp": instance.datetime.timestamp(),
-            'photo_url': instance.photo_url,
+            'photo_url': instance.photo_url or 'null',
         }
 
 
