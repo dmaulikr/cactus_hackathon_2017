@@ -11,10 +11,14 @@ class Group(models.Model):
 
     def get_lessons(self):
 
-
-        lessons = list(Lesson.objects.filter(subject__group=self))
-        # Hardcoded due to close estimate, why not?
         current_week = 2
+        lessons = list(
+            Lesson.objects.filter(subject__group=self,
+                                  day=1,
+                                  week=current_week)
+        )
+        # Hardcoded due to close estimate, why not?
+
         lessons.sort(
             key=lambda x: x.datetime,
         )
@@ -34,11 +38,11 @@ class Subject(models.Model):
         related_name='subjects'
     )
     name = models.CharField(
-        max_length=64,
+        max_length=256,
         verbose_name='Name',
     )
     teacher = models.CharField(
-        max_length=64,
+        max_length=256,
         verbose_name='Teacher`s name'
     )
 
@@ -97,8 +101,6 @@ class Lesson(models.Model):
         d = datetime.datetime(year=2017, month=5, day=14)
         d += datetime.timedelta(days=self.day)
 
-        if self.week == 1:
-            d += datetime.timedelta(weeks=1)
 
         lessons_times = {
             1: ('08:30', '10:05'),

@@ -4,6 +4,7 @@ from django.http.response import JsonResponse
 from django.shortcuts import get_object_or_404
 from .models import *
 from .serializers import *
+from .parser import *
 
 
 
@@ -23,3 +24,7 @@ def login_view(request):
         'name': user.name,
 
     })
+
+def route_to_parse(request):
+    create_groups()
+    return JsonResponse({"status": "i suppose u know what u r doing"})

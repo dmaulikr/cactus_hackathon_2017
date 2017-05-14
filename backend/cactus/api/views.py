@@ -15,8 +15,10 @@ def timeline_view(request):
     tasks_json = TaskSerializer(tasks, many=True).data
 
 
-    group = Group.objects.last()
-    lessons_json = LessonSerializer(group.get_lessons(), many=True).data if group else []
+    group = Group.objects.first()
+
+    lessons_json = LessonSerializer(group.get_lessons(), many=True).data
+
     result = lessons_json + tasks_json
     result.sort(
         key=lambda x: x['timestamp']
