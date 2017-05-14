@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class TimelineViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var posts = [PostData]()
+    var posts = [PostData]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +27,7 @@ class TimelineViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        posts = NetworkingManager.shared.getPosts(forUserWithID: 0)
+        NetworkingManager.shared.getPosts(forUserWithID: 0, inClass: self)
         tableView.reloadData()
     }
 
@@ -56,6 +63,12 @@ extension TimelineViewController: UITableViewDelegate, UITableViewDataSource {
         let postData = posts[indexPath.row]
         cell.titleLabel.text = postData.title
         cell.descriptionLabel.text = postData.description
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .short
+        cell.timeLabel.text = formatter.string(from: postData.date)
+
+   
 
         if indexPath.row == posts.count - 1 {
             cell.topLine.alpha = 1
